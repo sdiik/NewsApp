@@ -2,11 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>Auth0ClientID</key>
-    <string>bwAZ3JS9ArmKCgHCeSSYujzYDrf6AbFJ</string>
-    <key>Auth0Domain</key>
-    <string>news-testingapp.us.auth0.com</string>
-    <key>Auth0RedirectURL</key>
-    <string>ahmadshiddiq.NewsApp://auth/callback</string>
+	<key>Auth0ClientID</key>
+	<string>rxXRGOA5JmUxpGSWsiMq9X2mSeJFxe6W</string>
+	<key>Auth0Domain</key>
+	<string>news-testingapp.us.auth0.com</string>
+	<key>Auth0RedirectURL</key>
+	<string>ahmadshiddiq.NewsApp://auth/callback</string>
 </dict>
 </plist>
