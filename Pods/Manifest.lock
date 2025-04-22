@@ -1,0 +1,32 @@
+PODS:
+  - Alamofire (5.10.2)
+  - Auth0 (2.11.0):
+    - JWTDecode (= 3.3.0)
+    - SimpleKeychain (= 1.3.0)
+  - JWTDecode (3.3.0)
+  - Kingfisher (8.3.2)
+  - SimpleKeychain (1.3.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Auth0
+  - Kingfisher
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Auth0
+    - JWTDecode
+    - Kingfisher
+    - SimpleKeychain
+
+SPEC CHECKSUMS:
+  Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
+  Auth0: 59e3738114ac6dfa8ab9c17cd72b89eac5c28bcf
+  JWTDecode: 1ca6f765844457d0dd8690436860fecee788f631
+  Kingfisher: 0621d0ac0c78fecb19f6dc5303bde2b52abaf2f5
+  SimpleKeychain: 9c0f3ca8458fed74e01db864d181c5cbe278603e
+
+PODFILE CHECKSUM: 667be630a0171ae2f950abcddfe7de4617c413c6
+
+COCOAPODS: 1.16.2
