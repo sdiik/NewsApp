@@ -1,29 +1,29 @@
 //
-//  LoginViewController.swift
+//  RegisterViewController.swift
 //  NewsApp
 //
 //  Created by ahmad shiddiq on 23/04/25.
 //
 
-
-import Foundation
 import UIKit
+import Foundation
 
-class LoginViewController: UIViewController {
+class RegisterViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var errorEmailLabel: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var errorPasswordLabel: UILabel!
-    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var loadingView: UIActivityIndicatorView!
     
-    var loginViewModel = LoginViewModel()
+    var registerViewModel = RegisterViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginViewModel.delegate = self
+        registerViewModel.delegate = self
         setupView()
     }
     
@@ -41,35 +41,43 @@ class LoginViewController: UIViewController {
         passwordTextField.isSecureTextEntry = true
         passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         
-        loginButton.setTitle("Login", for: .normal)
-        loginButton.backgroundColor = UIColor.orange
-        loginButton.setTitleColor(UIColor.white, for: .normal)
-        loginButton.layer.cornerRadius = 20
-        loginButton.addTarget(self, action: #selector(loginTapped), for: .touchUpInside)
-        
         registerButton.setTitle("Register", for: .normal)
-        registerButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
-        registerButton.setTitleColor(UIColor.orange, for: .normal)
+        registerButton.backgroundColor = UIColor.orange
+        registerButton.setTitleColor(UIColor.white, for: .normal)
+        registerButton.layer.cornerRadius = 20
         registerButton.addTarget(self, action: #selector(registerTapped), for: .touchUpInside)
+        
+        loginButton.setTitle("Login", for: .normal)
+        loginButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+        loginButton.setTitleColor(UIColor.orange, for: .normal)
+        loginButton.addTarget(self, action: #selector(loginTapped), for: .touchUpInside)
     }
-    
+
     @objc private func loginTapped() {
-        guard let email = emailTextField.text, !email.isEmpty,
-              let password = passwordTextField.text, !password.isEmpty
-        else {
-            Alert.showMessage(with: "Please input email and passwor", controller: self)
-            return
-        }
-        loginViewModel.login(email: email, password: password)
+        self.navigationController?.popViewController(animated: true)
     }
 
     @objc private func registerTapped() {
-        self.navigationController?.pushViewController(RegisterViewController(), animated: true)
+        guard
+            let email = emailTextField.text, !email.isEmpty,
+            let password = passwordTextField.text, !password.isEmpty
+        else {
+            Alert.showMessage(with: "Please input email and password", controller: self)
+            return
+        }
+        registerViewModel.register(email: email, password: password)
+    }
+    
+    private func setupRegisterButton() {
+        guard errorEmailLabel.isHidden, errorPasswordLabel.isHidden else {
+            registerButton.isEnabled = false
+            return
+        }
+        registerButton.isEnabled = true
     }
 }
 
-
-extension LoginViewController {
+extension RegisterViewController {
     @objc func textFieldDidChange(_ textField: UITextField) {
         guard let text = textField.text else { return }
         switch textField {
@@ -91,19 +99,11 @@ extension LoginViewController {
         default:
             break
         }
-        setupLoginButton()
-    }
-
-    private func setupLoginButton() {
-        guard errorEmailLabel.isHidden, errorPasswordLabel.isHidden else {
-            registerButton.isEnabled = false
-            return
-        }
-        registerButton.isEnabled = true
+        setupRegisterButton()
     }
 }
 
-extension LoginViewController: LoginViewDelegate {
+extension RegisterViewController: RegisterViewDelegate {
     func isLoading(status: Bool) {
        DispatchQueue.main.async {
            self.loadingView.isHidden = !status
@@ -111,11 +111,11 @@ extension LoginViewController: LoginViewDelegate {
         }
     }
     
-    func loginSuccess() {
+    func registerSuccess() {
         print("sucess")
     }
     
-    func loginFailed(with message: String) {
+    func registerFailed(with message: String) {
         Alert.showMessage(with: "\(message)", controller: self)
     }
 }
