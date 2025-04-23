@@ -96,10 +96,10 @@ extension LoginViewController {
 
     private func setupLoginButton() {
         guard errorEmailLabel.isHidden, errorPasswordLabel.isHidden else {
-            registerButton.isEnabled = false
+            loginButton.isEnabled = false
             return
         }
-        registerButton.isEnabled = true
+        loginButton.isEnabled = true
     }
 }
 
@@ -112,7 +112,10 @@ extension LoginViewController: LoginViewDelegate {
     }
     
     func loginSuccess() {
-        print("sucess")
+        DispatchQueue.main.async {
+            self.navigationController?.pushViewController(ViewController(), animated: true)
+        }
+        
     }
     
     func loginFailed(with message: String) {

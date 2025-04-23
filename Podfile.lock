@@ -4,29 +4,37 @@ PODS:
     - JWTDecode (= 3.3.0)
     - SimpleKeychain (= 1.3.0)
   - JWTDecode (3.3.0)
+  - KeychainSwift (24.0.0)
   - Kingfisher (8.3.2)
+  - LocalNotificationCenter (0.4.0)
   - SimpleKeychain (1.3.0)
 
 DEPENDENCIES:
   - Alamofire
   - Auth0
+  - KeychainSwift
   - Kingfisher
+  - LocalNotificationCenter
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Auth0
     - JWTDecode
+    - KeychainSwift
     - Kingfisher
+    - LocalNotificationCenter
     - SimpleKeychain
 
 SPEC CHECKSUMS:
   Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
   Auth0: 59e3738114ac6dfa8ab9c17cd72b89eac5c28bcf
   JWTDecode: 1ca6f765844457d0dd8690436860fecee788f631
+  KeychainSwift: 007c4647486e4563adca839cf02cef00deb3b670
   Kingfisher: 0621d0ac0c78fecb19f6dc5303bde2b52abaf2f5
+  LocalNotificationCenter: 954b4b25c5558c1d37b1b4c6665d06bd9418951b
   SimpleKeychain: 9c0f3ca8458fed74e01db864d181c5cbe278603e
 
-PODFILE CHECKSUM: 667be630a0171ae2f950abcddfe7de4617c413c6
+PODFILE CHECKSUM: c3fa828494cbee0ef270c2fc903dc6f79ee2f721
 
 COCOAPODS: 1.16.2

@@ -11,32 +11,32 @@ import XCTest
 final class PasswordValidatorTests: XCTestCase {
     
     func testValidPasswords() {
-        XCTAssertTrue(isValidPassword("Password@232"))
-        XCTAssertTrue(isValidPassword("Abcd5643!"))
-        XCTAssertTrue(isValidPassword("Test@2343"))
+        XCTAssertTrue(Validation.isValidPassword("Password@232"))
+        XCTAssertTrue(Validation.isValidPassword("Abcd5643!"))
+        XCTAssertTrue(Validation.isValidPassword("Test@2343"))
     }
     
     func testShortPassword() {
-        XCTAssertFalse(isValidPassword("P@aa9"))
+        XCTAssertFalse(Validation.isValidPassword("P@aa9"))
     }
     
     func testNoUppercase() {
-        XCTAssertFalse(isValidPassword("password@776"))
+        XCTAssertFalse(Validation.isValidPassword("password@776"))
     }
     
     func testNoLowercase() {
-        XCTAssertFalse(isValidPassword("PASSWORD@776"))
+        XCTAssertFalse(Validation.isValidPassword("PASSWORD@776"))
     }
     
     func testNoDigit() {
-        XCTAssertFalse(isValidPassword("Password@"))
+        XCTAssertFalse(Validation.isValidPassword("Password@"))
     }
     
     func testNoSpecialChar() {
-        XCTAssertFalse(isValidPassword("Password343"))
+        XCTAssertFalse(Validation.isValidPassword("Password343"))
     }
     
     func testEmptyString() {
-        XCTAssertFalse(isValidPassword(""))
+        XCTAssertFalse(Validation.isValidPassword(""))
     }
 }
