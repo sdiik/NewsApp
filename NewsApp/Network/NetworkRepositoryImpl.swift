@@ -22,7 +22,12 @@ struct NetworkRepositoryImpl: NetworkRepository {
                 switch response.result {
                 case .success(let data):
                     if let httpResponse = response.response {
-                        result(.success((httpResponse, data)))
+                        do {
+                            let json = try JSONSerialization.jsonObject(with: data, options: [])
+                            result(.success((httpResponse, json)))
+                        } catch {
+                            result(.failure(error))
+                        }
                     } else {
                         let error = NSError(domain: "Error", code: 0, userInfo: nil)
                         result(.failure(error))

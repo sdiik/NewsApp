@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         window = UIWindow(frame: UIScreen.main.bounds)
         if credentialsStorage.isExpired() {
             credentialsStorage.clear()
-            NotificationHelper.shared.sendLogoutNotification()
             navigateToLoginScreen()
         } else {
             navigateToMainScreen()
@@ -37,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func navigateToMainScreen() {
         if let window = window {
-            let mainViewController = ViewController()
+            let mainViewController = HomeViewController()
             window.rootViewController = mainViewController
             window.makeKeyAndVisible()
         }
