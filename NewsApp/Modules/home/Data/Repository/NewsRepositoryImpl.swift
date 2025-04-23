@@ -10,7 +10,7 @@ import Foundation
 class NewsRepositoryImpl: NewsRepository {
 let networkService: NetworkRepository
     
-    init(networkService: NetworkRepository = NetworkRepositoryImpl()) {
+    init(networkService: NetworkRepository = NetworkRepositoryImpl(session: SSLSessionFactory.makePinnedSession())) {
         self.networkService = networkService
     }
     
