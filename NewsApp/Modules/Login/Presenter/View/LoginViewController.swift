@@ -33,6 +33,7 @@ class LoginViewController: UIViewController {
     }
     
     private func setupView() {
+        loadingView.color = UIColor.orange
         emailTextField.placeholder = "Email"
         emailTextField.borderStyle = .roundedRect
         emailTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
@@ -113,7 +114,7 @@ extension LoginViewController: LoginViewDelegate {
     
     func loginSuccess() {
         DispatchQueue.main.async {
-            self.navigationController?.pushViewController(ViewController(), animated: true)
+            self.navigationController?.pushViewController(HomeViewController(), animated: true)
         }
         
     }
