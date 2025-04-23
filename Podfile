@@ -8,6 +8,8 @@ target 'NewsApp' do
   pod 'Alamofire'
   pod 'Auth0'
   pod 'Kingfisher'
+  pod 'KeychainSwift'
+  pod 'LocalNotificationCenter'
 
   target 'NewsAppTests' do
     inherit! :search_paths
