@@ -2,6 +2,7 @@
  Users can search for articles, view blogs and reports, and track their recent searches locally.
 
 ## Features
+
 - Login and registration support.
 - Displays the latest articles, blogs, and reports.
 - Search articles by keyword.
@@ -14,7 +15,10 @@
 
 - UIKit (no SwiftUI)
 - Core Data (for Recent Searches)
-- URLSession for API calls
+- Auth0 (Authentication and login)
+- Alamofire (Networking)
+- Kingfisher (Image downloading and caching)
+- KeychainSwift (Secure storage for tokens)
 - Local Notifications (UserNotifications framework)
 - MVVM + Clean Architecture Pattern
 
