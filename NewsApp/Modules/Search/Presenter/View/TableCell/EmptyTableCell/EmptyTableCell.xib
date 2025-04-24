@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EmptyTableCell" rowHeight="189" id="tmL-fY-7bP" customClass="EmptyTableCell" customModule="NewsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="189"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tmL-fY-7bP" id="Xvl-Xi-qyJ">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="189"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jPF-1E-5Sa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data Tidak Di Temukan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAs-en-BPc">
+                                <rect key="frame" x="119.66666666666669" y="91.666666666666671" width="154" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XAs-en-BPc" firstAttribute="centerY" secondItem="jPF-1E-5Sa" secondAttribute="centerY" id="3tx-a0-eFb"/>
+                            <constraint firstItem="XAs-en-BPc" firstAttribute="centerX" secondItem="jPF-1E-5Sa" secondAttribute="centerX" id="dp0-tM-HJi"/>
+                            <constraint firstAttribute="height" constant="200" id="zOz-pT-8h2"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="jPF-1E-5Sa" firstAttribute="leading" secondItem="Xvl-Xi-qyJ" secondAttribute="leading" id="AlV-vJ-ElE"/>
+                    <constraint firstAttribute="trailing" secondItem="jPF-1E-5Sa" secondAttribute="trailing" id="G3F-cP-Ngp"/>
+                    <constraint firstAttribute="bottom" secondItem="jPF-1E-5Sa" secondAttribute="bottom" id="Tn6-e0-qSC"/>
+                    <constraint firstItem="jPF-1E-5Sa" firstAttribute="top" secondItem="Xvl-Xi-qyJ" secondAttribute="top" id="hKj-p4-sdH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="-19.083969465648853" y="2.4647887323943665"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

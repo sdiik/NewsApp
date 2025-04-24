@@ -21,6 +21,11 @@ class HomeViewController: ParentViewController {
         fetchAllNews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     private func registerCell() {
         homeTableView.delegate = self
         homeTableView.dataSource = self
@@ -44,9 +49,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: SectionHeaderView.reuseIdentifier) as? SectionHeaderView else {
             return nil
         }
-        header.configure(title: titleSection[section])
+        header.configure(title: NewsType(rawValue: section)?.title ?? "")
         header.seeMoreAction = { [weak self] in
-            
+            let searchVC = SearchViewController()
+            searchVC.newType = NewsType(rawValue: section) ?? .articles
+            self?.navigationController?.pushViewController(searchVC, animated: true)
         }
         return header
     }
