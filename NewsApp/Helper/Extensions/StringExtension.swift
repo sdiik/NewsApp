@@ -42,3 +42,23 @@ class GreetingHelper {
         }
     }
 }
+
+class StringUtils {
+    static func formatDate(_ dateString: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        if let date = dateFormatter.date(from: dateString) {
+            let localDateFormatter = DateFormatter()
+            localDateFormatter.dateStyle = .long
+            localDateFormatter.timeStyle = .short
+            localDateFormatter.locale = Locale(identifier: "en_US")
+            return localDateFormatter.string(from: date).replacingOccurrences(of: " at ", with: ",")
+        }
+        return dateString
+    }
+    
+    static func getSummarySentence(from summary: String) -> String {
+        let sentence = summary.split(separator: ".").first ?? ""
+        return String(sentence)
+    }
+}

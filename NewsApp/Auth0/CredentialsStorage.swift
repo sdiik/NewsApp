@@ -14,7 +14,7 @@ final class CredentialsStorage {
     private let timestampKey = "loginTimestamp"
     
     private let keychain = KeychainSwift()
-    private let sessionTimeout: TimeInterval = 60
+    private let sessionTimeout: TimeInterval = 10*60
 
     func save(_ credentials: Credentials) {
         let codable = CodableCredentials(credentials: credentials)

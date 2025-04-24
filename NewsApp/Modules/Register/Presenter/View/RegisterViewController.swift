@@ -105,14 +105,12 @@ extension RegisterViewController {
 
 extension RegisterViewController: RegisterViewDelegate {
     func isLoading(status: Bool) {
-       DispatchQueue.main.async {
-           self.loadingView.isHidden = !status
-           status ? self.loadingView.startAnimating() : self.loadingView.stopAnimating()
-        }
+        self.loadingView.isHidden = !status
+        status ? self.loadingView.startAnimating() : self.loadingView.stopAnimating()
     }
     
     func registerSuccess() {
-        print("sucess")
+        self.navigationController?.pushViewController(HomeViewController(), animated: true)
     }
     
     func registerFailed(with message: String) {
