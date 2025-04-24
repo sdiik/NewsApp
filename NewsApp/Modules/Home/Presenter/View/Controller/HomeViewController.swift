@@ -8,6 +8,8 @@
 import UIKit
 
 class HomeViewController: ParentViewController {
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var loadingView: UIActivityIndicatorView!
     @IBOutlet weak var homeTableView: UITableView!
     
@@ -16,6 +18,7 @@ class HomeViewController: ParentViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTitle()
         registerCell()
         viewModel.delegate = self
         fetchAllNews()
@@ -24,6 +27,12 @@ class HomeViewController: ParentViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    private func setupTitle() {
+        let greating = GreetingHelper.getGreeting(for: Date())
+        titleLabel.text = greating
+        descLabel.text = CredentialsStorage().getUsername()
     }
     
     private func registerCell() {
