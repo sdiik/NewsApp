@@ -21,7 +21,7 @@ class NewsFetcher {
         repo.fetchRequest(url) { result in
             switch result {
             case .success((_, let data)):
-                let message = String(data: data, encoding: .utf8) ?? "Invalid Data"
+                let message = "\(data)"
                 completion(message)
             case .failure:
                 completion("Fetch Failed")

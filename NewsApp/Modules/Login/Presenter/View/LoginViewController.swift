@@ -32,6 +32,10 @@ class LoginViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
     private func setupView() {
         loadingView.color = UIColor.orange
         emailTextField.placeholder = "Email"

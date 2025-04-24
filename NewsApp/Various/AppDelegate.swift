@@ -36,8 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func navigateToMainScreen() {
         if let window = window {
-            let mainViewController = HomeViewController()
-            window.rootViewController = mainViewController
+            let navigationController = UINavigationController(rootViewController: HomeViewController())
+            window.rootViewController = navigationController
             window.makeKeyAndVisible()
         }
     }

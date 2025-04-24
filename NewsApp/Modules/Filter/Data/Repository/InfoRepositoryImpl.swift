@@ -1,23 +1,22 @@
 //
-//  NewsRepositoryImpl.swift
+//  InfoRepositoryImpl.swift
 //  NewsApp
 //
-//  Created by ahmad shiddiq on 23/04/25.
+//  Created by ahmad shiddiq on 24/04/25.
 //
 
 import Foundation
 
-class NewsRepositoryImpl: NewsRepository {
-let networkService: NetworkRepository
+class InfoRepositoryImpl: InfoRepository {
+    let networkService: NetworkRepository
     
     init(networkService: NetworkRepository = NetworkRepositoryImpl(session: SSLSessionFactory.makePinnedSession())) {
         self.networkService = networkService
     }
     
-    func fetchNews(type: NewsType, completion: @escaping FetchItemsResult) {
-        guard let url = URL(string: type.url) else {
-            return
-        }
+    func getInfo(completion: @escaping InfoItemsResult) {
+        guard let url = NewsAPIService().makeInfoURL() else { return }
+        
         networkService.fetchRequest(url) { networkResult in
             switch networkResult {
             case .success(let response):
@@ -33,11 +32,11 @@ let networkService: NetworkRepository
         }
     }
     
-    private func parse(data: Any, result: @escaping FetchItemsResult) {
+    private func parse(data: Any, result: @escaping InfoItemsResult) {
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: data, options: [])
             let decoder = JSONDecoder()
-            let blogResponse = try decoder.decode(NewsResponse.self, from: jsonData)
+            let blogResponse = try decoder.decode(InfoResponse.self, from: jsonData)
             result(.success(blogResponse))
         } catch {
             result(.failure(.parsing))
