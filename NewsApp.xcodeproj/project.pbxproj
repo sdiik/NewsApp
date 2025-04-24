@@ -50,6 +50,9 @@
 		0E6BF06F2DB9BC9F0094326A /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF06E2DB9BC9B0094326A /* FilterViewModel.swift */; };
 		0E6BF0732DB9C1A30094326A /* EmptyTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF0722DB9C19E0094326A /* EmptyTableCell.swift */; };
 		0E6BF0772DB9C1BB0094326A /* EmptyTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E6BF0762DB9C1BB0094326A /* EmptyTableCell.xib */; };
+		0E6BF0792DB9C4BD0094326A /* GreetingHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF0782DB9C4BB0094326A /* GreetingHelperTests.swift */; };
+		0E6BF07B2DB9C9930094326A /* DecodeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF07A2DB9C98E0094326A /* DecodeHelper.swift */; };
+		0E6BF07D2DB9CB2D0094326A /* AuthServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF07C2DB9CB2C0094326A /* AuthServiceTests.swift */; };
 		0EB7A60C2DB7828A006408A2 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB7A6002DB7828A006408A2 /* NetworkRepository.swift */; };
 		0EB7A60D2DB7828A006408A2 /* NetworkRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB7A6012DB7828A006408A2 /* NetworkRepositoryImpl.swift */; };
 		0EB7A60E2DB7828A006408A2 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB7A6022DB7828A006408A2 /* URLSessionProtocol.swift */; };
@@ -163,6 +166,9 @@
 		0E6BF06E2DB9BC9B0094326A /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		0E6BF0722DB9C19E0094326A /* EmptyTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableCell.swift; sourceTree = "<group>"; };
 		0E6BF0762DB9C1BB0094326A /* EmptyTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyTableCell.xib; sourceTree = "<group>"; };
+		0E6BF0782DB9C4BB0094326A /* GreetingHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingHelperTests.swift; sourceTree = "<group>"; };
+		0E6BF07A2DB9C98E0094326A /* DecodeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeHelper.swift; sourceTree = "<group>"; };
+		0E6BF07C2DB9CB2C0094326A /* AuthServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceTests.swift; sourceTree = "<group>"; };
 		0EB7A54D2DB744F2006408A2 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB7A5632DB744F3006408A2 /* NewsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB7A56D2DB744F3006408A2 /* NewsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -790,6 +796,7 @@
 		0EB7A6E72DB7D20C006408A2 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				0E6BF07A2DB9C98E0094326A /* DecodeHelper.swift */,
 				0E6BF0512DB9AEB90094326A /* NewsSiteHelper.swift */,
 				0E6BF04D2DB9AB940094326A /* SortingHelper.swift */,
 				0E6BEF0F2DB862A40094326A /* NotificationHelper.swift */,
@@ -1017,6 +1024,8 @@
 		0EB7A73B2DB8420D006408A2 /* Validation */ = {
 			isa = PBXGroup;
 			children = (
+				0E6BF07C2DB9CB2C0094326A /* AuthServiceTests.swift */,
+				0E6BF0782DB9C4BB0094326A /* GreetingHelperTests.swift */,
 				0E6BF04F2DB9ABB70094326A /* SortingHelperTests.swift */,
 				0EB7A73C2DB8422C006408A2 /* EmailValidatorTests.swift */,
 				0EB7A7392DB83F59006408A2 /* PasswordValidatorTests.swift */,
@@ -1297,6 +1306,7 @@
 				0E6BF0602DB9BAD80094326A /* InfoError.swift in Sources */,
 				0EB7A72F2DB83B45006408A2 /* RegisterRepository.swift in Sources */,
 				0EB7A6DE2DB78FB9006408A2 /* AppDIContainer.swift in Sources */,
+				0E6BF07B2DB9C9930094326A /* DecodeHelper.swift in Sources */,
 				0EB7A7332DB83BE7006408A2 /* RegisterUseCaseImpl.swift in Sources */,
 				0EB7A60C2DB7828A006408A2 /* NetworkRepository.swift in Sources */,
 				0E6BEFA02DB8C0FB0094326A /* NewsRepository.swift in Sources */,
@@ -1376,7 +1386,9 @@
 				0EB7A6E42DB7965B006408A2 /* MockAuthService.swift in Sources */,
 				0EB7A66B2DB785A0006408A2 /* NewsAppTests.swift in Sources */,
 				0EB7A6E02DB79021006408A2 /* SLLPanningTests.swift in Sources */,
+				0E6BF0792DB9C4BD0094326A /* GreetingHelperTests.swift in Sources */,
 				0EB7A6F22DB7D999006408A2 /* AuthRepositoryTests.swift in Sources */,
+				0E6BF07D2DB9CB2D0094326A /* AuthServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

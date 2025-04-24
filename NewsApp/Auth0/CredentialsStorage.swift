@@ -40,6 +40,16 @@ final class CredentialsStorage {
         return elapsed > sessionTimeout
     }
     
+    func getUsername() -> String {
+        let data = load()
+        if let idToken = data?.idToken {
+            let userInfo = decode(jwtToken: idToken)
+            return "\(userInfo["nickname"] ?? "N/A")"
+        } else {
+            return ""
+        }
+    }
+    
     func clear() {
         keychain.delete(key)
         UserDefaults.standard.removeObject(forKey: timestampKey)
