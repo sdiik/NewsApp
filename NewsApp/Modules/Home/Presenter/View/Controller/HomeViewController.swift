@@ -83,11 +83,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "SectionTableCell", for: indexPath) as? SectionTableCell else { return .init() }
         switch indexPath.section {
         case 0:
-            cell.setNewsItems(with: viewModel.articles)
+            cell.setNewsItems(with: viewModel.articles, newsType: 0, controller: self)
         case 1:
-            cell.setNewsItems(with: viewModel.blogs)
+            cell.setNewsItems(with: viewModel.blogs, newsType: 1, controller: self)
         case 2:
-            cell.setNewsItems(with: viewModel.reports)
+            cell.setNewsItems(with: viewModel.reports, newsType: 2, controller: self)
         default:
             break
         }
@@ -106,11 +106,7 @@ extension HomeViewController: HomeViewDelegate {
     }
 
     func didFailWithError(_ error: Error) {
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else { return }
-            Alert.showMessage(with: error.localizedDescription, controller: self)
-        }
-        
+        Alert.showMessage(with: error.localizedDescription, controller: self)
     }
 
     func didFetchNews(for type: NewsType) {

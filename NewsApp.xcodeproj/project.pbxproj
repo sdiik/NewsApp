@@ -57,6 +57,16 @@
 		0E6BF08A2DB9D3D60094326A /* SearchViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF0892DB9D3C80094326A /* SearchViewController+UITableView.swift */; };
 		0E6BF08C2DB9D46F0094326A /* SearchViewController+UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF08B2DB9D4690094326A /* SearchViewController+UISearchBar.swift */; };
 		0E6BF08E2DB9D6830094326A /* RecentSearchManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF08D2DB9D6820094326A /* RecentSearchManagerTests.swift */; };
+		0E6BF0902DB9D7FE0094326A /* StringExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF08F2DB9D7EA0094326A /* StringExtensionTest.swift */; };
+		0E6BF0942DB9DAED0094326A /* DetailError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF0932DB9DAEA0094326A /* DetailError.swift */; };
+		0E6BF0972DB9DB050094326A /* DetailRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF0962DB9DB010094326A /* DetailRepositoryImpl.swift */; };
+		0E6BF09B2DB9DB400094326A /* DetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF09A2DB9DB3A0094326A /* DetailRepository.swift */; };
+		0E6BF09E2DB9DC5C0094326A /* DetailType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF09D2DB9DC580094326A /* DetailType.swift */; };
+		0E6BF0A02DB9DD4C0094326A /* DetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF09F2DB9DD470094326A /* DetailUseCase.swift */; };
+		0E6BF0A22DB9DD5A0094326A /* DetailUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF0A12DB9DD520094326A /* DetailUseCaseImpl.swift */; };
+		0E6BF0A42DB9DE140094326A /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF0A32DB9DE110094326A /* DetailViewModel.swift */; };
+		0E6BF0A62DB9DFC20094326A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF0A52DB9DFBB0094326A /* DetailViewController.swift */; };
+		0E6BF0AA2DB9DFD80094326A /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E6BF0A92DB9DFD80094326A /* DetailViewController.xib */; };
 		0EB7A60C2DB7828A006408A2 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB7A6002DB7828A006408A2 /* NetworkRepository.swift */; };
 		0EB7A60D2DB7828A006408A2 /* NetworkRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB7A6012DB7828A006408A2 /* NetworkRepositoryImpl.swift */; };
 		0EB7A60E2DB7828A006408A2 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB7A6022DB7828A006408A2 /* URLSessionProtocol.swift */; };
@@ -177,6 +187,16 @@
 		0E6BF0892DB9D3C80094326A /* SearchViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+UITableView.swift"; sourceTree = "<group>"; };
 		0E6BF08B2DB9D4690094326A /* SearchViewController+UISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+UISearchBar.swift"; sourceTree = "<group>"; };
 		0E6BF08D2DB9D6820094326A /* RecentSearchManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchManagerTests.swift; sourceTree = "<group>"; };
+		0E6BF08F2DB9D7EA0094326A /* StringExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTest.swift; sourceTree = "<group>"; };
+		0E6BF0932DB9DAEA0094326A /* DetailError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailError.swift; sourceTree = "<group>"; };
+		0E6BF0962DB9DB010094326A /* DetailRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRepositoryImpl.swift; sourceTree = "<group>"; };
+		0E6BF09A2DB9DB3A0094326A /* DetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRepository.swift; sourceTree = "<group>"; };
+		0E6BF09D2DB9DC580094326A /* DetailType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailType.swift; sourceTree = "<group>"; };
+		0E6BF09F2DB9DD470094326A /* DetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUseCase.swift; sourceTree = "<group>"; };
+		0E6BF0A12DB9DD520094326A /* DetailUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUseCaseImpl.swift; sourceTree = "<group>"; };
+		0E6BF0A32DB9DE110094326A /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		0E6BF0A52DB9DFBB0094326A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0E6BF0A92DB9DFD80094326A /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		0EB7A54D2DB744F2006408A2 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB7A5632DB744F3006408A2 /* NewsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB7A56D2DB744F3006408A2 /* NewsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -684,7 +704,6 @@
 			isa = PBXGroup;
 			children = (
 				0E6BF0862DB9CC940094326A /* ViewModel */,
-				0E6BF0852DB9CC8F0094326A /* Model */,
 				0E6BF0842DB9CC8B0094326A /* View */,
 			);
 			path = Presenter;
@@ -693,6 +712,9 @@
 		0E6BF0802DB9CC6B0094326A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				0E6BF09C2DB9DC500094326A /* Entities */,
+				0E6BF0992DB9DB180094326A /* Repository */,
+				0E6BF0982DB9DB120094326A /* UseCase */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -700,6 +722,8 @@
 		0E6BF0812DB9CC710094326A /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				0E6BF0952DB9DAF90094326A /* Repository */,
+				0E6BF0922DB9DAE20094326A /* Error */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -707,22 +731,67 @@
 		0E6BF0842DB9CC8B0094326A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0E6BF0A52DB9DFBB0094326A /* DetailViewController.swift */,
+				0E6BF0A92DB9DFD80094326A /* DetailViewController.xib */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		0E6BF0852DB9CC8F0094326A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		0E6BF0862DB9CC940094326A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0E6BF0A32DB9DE110094326A /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0E6BF0912DB9D8030094326A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0E6BF08F2DB9D7EA0094326A /* StringExtensionTest.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		0E6BF0922DB9DAE20094326A /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				0E6BF0932DB9DAEA0094326A /* DetailError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		0E6BF0952DB9DAF90094326A /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				0E6BF0962DB9DB010094326A /* DetailRepositoryImpl.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		0E6BF0982DB9DB120094326A /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				0E6BF0A12DB9DD520094326A /* DetailUseCaseImpl.swift */,
+				0E6BF09F2DB9DD470094326A /* DetailUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		0E6BF0992DB9DB180094326A /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				0E6BF09A2DB9DB3A0094326A /* DetailRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		0E6BF09C2DB9DC500094326A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				0E6BF09D2DB9DC580094326A /* DetailType.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		0EB7A5442DB744F2006408A2 = {
@@ -795,6 +864,7 @@
 		0EB7A6672DB785A0006408A2 /* NewsAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				0E6BF0912DB9D8030094326A /* Extension */,
 				0EB7A73B2DB8420D006408A2 /* Validation */,
 				0EB7A6662DB785A0006408A2 /* NewsAppTests.swift */,
 				0EB7A6E22DB7964D006408A2 /* OAuth */,
@@ -1240,6 +1310,7 @@
 				0E6BF0772DB9C1BB0094326A /* EmptyTableCell.xib in Resources */,
 				0EB7A6722DB78E00006408A2 /* api_cert.cer in Resources */,
 				0E6BEF342DB8B0B70094326A /* ItemCell.xib in Resources */,
+				0E6BF0AA2DB9DFD80094326A /* DetailViewController.xib in Resources */,
 				0E6BF0242DB923670094326A /* SearchViewController.xib in Resources */,
 				0EB7A6112DB7828A006408A2 /* Assets.xcassets in Resources */,
 				0EB7A6122DB7828A006408A2 /* LaunchScreen.storyboard in Resources */,
@@ -1375,10 +1446,13 @@
 				0EB7A72F2DB83B45006408A2 /* RegisterRepository.swift in Sources */,
 				0E6BF0882DB9CE570094326A /* RecentSearchManager.swift in Sources */,
 				0EB7A6DE2DB78FB9006408A2 /* AppDIContainer.swift in Sources */,
+				0E6BF0A22DB9DD5A0094326A /* DetailUseCaseImpl.swift in Sources */,
 				0E6BF07B2DB9C9930094326A /* DecodeHelper.swift in Sources */,
 				0EB7A7332DB83BE7006408A2 /* RegisterUseCaseImpl.swift in Sources */,
 				0EB7A60C2DB7828A006408A2 /* NetworkRepository.swift in Sources */,
 				0E6BEFA02DB8C0FB0094326A /* NewsRepository.swift in Sources */,
+				0E6BF0A42DB9DE140094326A /* DetailViewModel.swift in Sources */,
+				0E6BF0A02DB9DD4C0094326A /* DetailUseCase.swift in Sources */,
 				0E6BF0732DB9C1A30094326A /* EmptyTableCell.swift in Sources */,
 				0EB7A70B2DB81CC4006408A2 /* LoginError.swift in Sources */,
 				0E6BEF252DB8A97B0094326A /* HomeViewController.swift in Sources */,
@@ -1399,12 +1473,15 @@
 				0E6BF08A2DB9D3D60094326A /* SearchViewController+UITableView.swift in Sources */,
 				0E6BEF2A2DB8ADA70094326A /* SectionTableCell.swift in Sources */,
 				0E6BF0522DB9AEBA0094326A /* NewsSiteHelper.swift in Sources */,
+				0E6BF09E2DB9DC5C0094326A /* DetailType.swift in Sources */,
 				0EB7A7122DB82044006408A2 /* LoginRepositoryImpl.swift in Sources */,
 				0E6BF0472DB9967A0094326A /* SearchNewsRepository.swift in Sources */,
 				0EB7A7172DB822B3006408A2 /* LoginUseCaseImpl.swift in Sources */,
 				0E6BF05D2DB9BA510094326A /* InfoResponse.swift in Sources */,
 				0EB7A72B2DB83B24006408A2 /* RegisterRepositoryImpl.swift in Sources */,
+				0E6BF0942DB9DAED0094326A /* DetailError.swift in Sources */,
 				0EB7A70F2DB81FA5006408A2 /* LoginRepository.swift in Sources */,
+				0E6BF0A62DB9DFC20094326A /* DetailViewController.swift in Sources */,
 				0E6BEF232DB8A9720094326A /* HomeViewModel.swift in Sources */,
 				0E6BEF9D2DB8C0AE0094326A /* FetchNewsError.swift in Sources */,
 				0E6BF0352DB9920A0094326A /* NetworkConstants.swift in Sources */,
@@ -1428,8 +1505,10 @@
 				0EB7A7042DB813F8006408A2 /* LoginViewController.swift in Sources */,
 				0E6BF0412DB996340094326A /* SearchNewsError.swift in Sources */,
 				0E6BF06F2DB9BC9F0094326A /* FilterViewModel.swift in Sources */,
+				0E6BF09B2DB9DB400094326A /* DetailRepository.swift in Sources */,
 				0EB7A6102DB7828A006408A2 /* ViewController.swift in Sources */,
 				0E6BF0122DB8CE0D0094326A /* IntExtension.swift in Sources */,
+				0E6BF0972DB9DB050094326A /* DetailRepositoryImpl.swift in Sources */,
 				0E6BF04C2DB9970C0094326A /* SearchNewsUseCase.swift in Sources */,
 				0E6BF08C2DB9D46F0094326A /* SearchViewController+UISearchBar.swift in Sources */,
 				0E6BF06B2DB9BBD40094326A /* InfoUseCaseImpl.swift in Sources */,
@@ -1454,6 +1533,7 @@
 				0EB7A66A2DB785A0006408A2 /* NetworkRepositoryTests.swift in Sources */,
 				0EB7A73D2DB84231006408A2 /* EmailValidatorTests.swift in Sources */,
 				0EB7A73A2DB83F7C006408A2 /* PasswordValidatorTests.swift in Sources */,
+				0E6BF0902DB9D7FE0094326A /* StringExtensionTest.swift in Sources */,
 				0EB7A6E42DB7965B006408A2 /* MockAuthService.swift in Sources */,
 				0EB7A66B2DB785A0006408A2 /* NewsAppTests.swift in Sources */,
 				0EB7A6E02DB79021006408A2 /* SLLPanningTests.swift in Sources */,

@@ -60,7 +60,10 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             viewModel.loadInitialNews(with: selectedTerm, type: newType)
             recentTableView.isHidden = true
         default:
-            break
+            let detailVC = DetailViewController()
+            detailVC.viewModel.id = viewModel.filteredReports[indexPath.row].id
+            detailVC.viewModel.detailType = DetailType(rawValue: newType.rawValue)
+            self.navigationController?.pushViewController(detailVC, animated: true)
         }
     }
     

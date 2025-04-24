@@ -82,7 +82,7 @@ class SearchViewController: ParentViewController {
     @objc func handleRefresh() {
         viewModel.resetAll()
         searchView.text = viewModel.searchQuery
-        viewModel.loadInitialNews(with: "", type: newType)
+        viewModel.loadInitialNews(with: viewModel.searchQuery, type: newType)
     }
     
     @objc func sortTapped() {

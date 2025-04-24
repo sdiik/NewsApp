@@ -110,17 +110,12 @@ extension LoginViewController {
 
 extension LoginViewController: LoginViewDelegate {
     func isLoading(status: Bool) {
-       DispatchQueue.main.async {
-           self.loadingView.isHidden = !status
-           status ? self.loadingView.startAnimating() : self.loadingView.stopAnimating()
-        }
+        self.loadingView.isHidden = !status
+        status ? self.loadingView.startAnimating() : self.loadingView.stopAnimating()
     }
     
     func loginSuccess() {
-        DispatchQueue.main.async {
-            self.navigationController?.pushViewController(HomeViewController(), animated: true)
-        }
-        
+        self.navigationController?.pushViewController(HomeViewController(), animated: true)
     }
     
     func loginFailed(with message: String) {

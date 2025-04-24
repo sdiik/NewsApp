@@ -97,7 +97,7 @@ class SearchViewModel {
     }
     
     func isFilterProccesing() -> Bool {
-        if selectedNewsSite != "" || selectedNewsSite != "ALL" {
+        if let alreadySelected = selectedNewsSite, !alreadySelected.isEmpty {
             return true
         } else {
             return false

@@ -49,4 +49,28 @@ struct NewsAPIService {
         ]
         return components?.url
     }
+    
+    func makeDetailArticlesURL(with id: Int) -> URL? {
+        var components = URLComponents(string: NetworkConstants.baseURL + NetworkConstants.Endpoints.articles+"/\(id)")
+        components?.queryItems = [
+            URLQueryItem(name: "format", value: "json")
+        ]
+        return components?.url
+    }
+    
+    func makeDetailBlogsURL(with id: Int) -> URL? {
+        var components = URLComponents(string: NetworkConstants.baseURL + NetworkConstants.Endpoints.blogs+"/\(id)")
+        components?.queryItems = [
+            URLQueryItem(name: "format", value: "json")
+        ]
+        return components?.url
+    }
+    
+    func makeDetailReportsURL(with id: Int) -> URL? {
+        var components = URLComponents(string: NetworkConstants.baseURL + NetworkConstants.Endpoints.reports+"/\(id)")
+        components?.queryItems = [
+            URLQueryItem(name: "format", value: "json")
+        ]
+        return components?.url
+    }
 }

@@ -13,5 +13,6 @@ enum NetworkConstants {
         static let blogs = "/blogs"
         static let reports = "/reports"
         static let info = "/info"
+        
     }
 }

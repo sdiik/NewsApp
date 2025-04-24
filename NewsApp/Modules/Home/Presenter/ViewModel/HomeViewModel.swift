@@ -5,6 +5,8 @@
 //  Created by ahmad shiddiq on 23/04/25.
 //
 
+import Foundation
+
 protocol HomeViewDelegate: AnyObject {
     func didStartLoading()
     func didFinishLoading()
@@ -26,20 +28,21 @@ class HomeViewModel {
     
     func fetchNews(for type: NewsType) {
         delegate?.didStartLoading()
-        newsUseCase.execute(type: type) { [weak self] result in
-            guard let self = self else { return }
-            self.delegate?.didFinishLoading()
-            
-            switch result {
-            case .success(let newsResponse):
-                switch type {
-                case .articles: self.articles = newsResponse.results ?? []
-                case .blogs: self.blogs = newsResponse.results ?? []
-                case .reports: self.reports = newsResponse.results ?? []
+        newsUseCase.execute(type: type) { result in
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                self.delegate?.didFinishLoading()
+                switch result {
+                case .success(let newsResponse):
+                    switch type {
+                    case .articles: self.articles = newsResponse.results ?? []
+                    case .blogs: self.blogs = newsResponse.results ?? []
+                    case .reports: self.reports = newsResponse.results ?? []
+                    }
+                    self.delegate?.didFetchNews(for: type)
+                case .failure(let error):
+                    self.delegate?.didFailWithError(error)
                 }
-                self.delegate?.didFetchNews(for: type)
-            case .failure(let error):
-                self.delegate?.didFailWithError(error)
             }
         }
     }

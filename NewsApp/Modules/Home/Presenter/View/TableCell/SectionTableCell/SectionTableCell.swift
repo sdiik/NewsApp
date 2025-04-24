@@ -11,6 +11,8 @@ class SectionTableCell: UITableViewCell {
     @IBOutlet weak var listCollectionView: UICollectionView!
     
     var newsItems = [Blog]()
+    var controller = UIViewController()
+    var newsType: Int = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,8 +26,10 @@ class SectionTableCell: UITableViewCell {
         listCollectionView.decelerationRate = .fast
     }
     
-    internal func setNewsItems(with data: [Blog]) {
+    internal func setNewsItems(with data: [Blog], newsType: Int, controller: UIViewController) {
         newsItems = data
+        self.newsType = newsType
+        self.controller = controller
         listCollectionView.reloadData()
     }
 }
@@ -53,5 +57,9 @@ extension SectionTableCell: UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailVC = DetailViewController()
+        detailVC.viewModel.id = newsItems[indexPath.row].id
+        detailVC.viewModel.detailType = DetailType(rawValue: newsType)
+        controller.navigationController?.pushViewController(detailVC, animated: true)
     }
 }
