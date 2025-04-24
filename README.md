@@ -1,3 +1,23 @@
+**NewsApp** is an iOS application built with **UIKit** and **MVVM Clean Architecture**.
+ Users can search for articles, view blogs and reports, and track their recent searches locally.
+
+## Features
+- Login and registration support.
+- Displays the latest articles, blogs, and reports.
+- Search articles by keyword.
+- Stores recent keywords locally for quick access.
+- Shows a localized publish date and a short summary.
+- Filter and sort articles by various criteria.
+- Requests permission to send updates and alerts.
+
+## Technologies & Libraries
+
+- UIKit (no SwiftUI)
+- Core Data (for Recent Searches)
+- URLSession for API calls
+- Local Notifications (UserNotifications framework)
+- MVVM + Clean Architecture Pattern
+
 ## screenshoot
 
 <img width="315" alt="Screenshot 2025-04-24 at 10 45 59" src="https://github.com/user-attachments/assets/b4c95a37-6e84-414e-ba5d-a5b814890714" />
