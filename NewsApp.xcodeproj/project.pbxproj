@@ -53,6 +53,10 @@
 		0E6BF0792DB9C4BD0094326A /* GreetingHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF0782DB9C4BB0094326A /* GreetingHelperTests.swift */; };
 		0E6BF07B2DB9C9930094326A /* DecodeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF07A2DB9C98E0094326A /* DecodeHelper.swift */; };
 		0E6BF07D2DB9CB2D0094326A /* AuthServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF07C2DB9CB2C0094326A /* AuthServiceTests.swift */; };
+		0E6BF0882DB9CE570094326A /* RecentSearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF0872DB9CE560094326A /* RecentSearchManager.swift */; };
+		0E6BF08A2DB9D3D60094326A /* SearchViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF0892DB9D3C80094326A /* SearchViewController+UITableView.swift */; };
+		0E6BF08C2DB9D46F0094326A /* SearchViewController+UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF08B2DB9D4690094326A /* SearchViewController+UISearchBar.swift */; };
+		0E6BF08E2DB9D6830094326A /* RecentSearchManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF08D2DB9D6820094326A /* RecentSearchManagerTests.swift */; };
 		0EB7A60C2DB7828A006408A2 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB7A6002DB7828A006408A2 /* NetworkRepository.swift */; };
 		0EB7A60D2DB7828A006408A2 /* NetworkRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB7A6012DB7828A006408A2 /* NetworkRepositoryImpl.swift */; };
 		0EB7A60E2DB7828A006408A2 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB7A6022DB7828A006408A2 /* URLSessionProtocol.swift */; };
@@ -169,6 +173,10 @@
 		0E6BF0782DB9C4BB0094326A /* GreetingHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingHelperTests.swift; sourceTree = "<group>"; };
 		0E6BF07A2DB9C98E0094326A /* DecodeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeHelper.swift; sourceTree = "<group>"; };
 		0E6BF07C2DB9CB2C0094326A /* AuthServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceTests.swift; sourceTree = "<group>"; };
+		0E6BF0872DB9CE560094326A /* RecentSearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchManager.swift; sourceTree = "<group>"; };
+		0E6BF0892DB9D3C80094326A /* SearchViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+UITableView.swift"; sourceTree = "<group>"; };
+		0E6BF08B2DB9D4690094326A /* SearchViewController+UISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+UISearchBar.swift"; sourceTree = "<group>"; };
+		0E6BF08D2DB9D6820094326A /* RecentSearchManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchManagerTests.swift; sourceTree = "<group>"; };
 		0EB7A54D2DB744F2006408A2 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB7A5632DB744F3006408A2 /* NewsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB7A56D2DB744F3006408A2 /* NewsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -472,6 +480,8 @@
 		0E6BF0202DB9234C0094326A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0E6BF08B2DB9D4690094326A /* SearchViewController+UISearchBar.swift */,
+				0E6BF0892DB9D3C80094326A /* SearchViewController+UITableView.swift */,
 				0E6BF0212DB923550094326A /* SearchViewController.swift */,
 				0E6BF0232DB923670094326A /* SearchViewController.xib */,
 			);
@@ -660,6 +670,61 @@
 			path = EmptyTableCell;
 			sourceTree = "<group>";
 		};
+		0E6BF07E2DB9CC600094326A /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				0E6BF0812DB9CC710094326A /* Data */,
+				0E6BF0802DB9CC6B0094326A /* Domain */,
+				0E6BF07F2DB9CC660094326A /* Presenter */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		0E6BF07F2DB9CC660094326A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0E6BF0862DB9CC940094326A /* ViewModel */,
+				0E6BF0852DB9CC8F0094326A /* Model */,
+				0E6BF0842DB9CC8B0094326A /* View */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0E6BF0802DB9CC6B0094326A /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		0E6BF0812DB9CC710094326A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0E6BF0842DB9CC8B0094326A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0E6BF0852DB9CC8F0094326A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0E6BF0862DB9CC940094326A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		0EB7A5442DB744F2006408A2 = {
 			isa = PBXGroup;
 			children = (
@@ -796,6 +861,7 @@
 		0EB7A6E72DB7D20C006408A2 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				0E6BF0872DB9CE560094326A /* RecentSearchManager.swift */,
 				0E6BF07A2DB9C98E0094326A /* DecodeHelper.swift */,
 				0E6BF0512DB9AEB90094326A /* NewsSiteHelper.swift */,
 				0E6BF04D2DB9AB940094326A /* SortingHelper.swift */,
@@ -820,6 +886,7 @@
 		0EB7A6F92DB7E3AF006408A2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0E6BF07E2DB9CC600094326A /* Detail */,
 				0E6BF0552DB9BA140094326A /* Filter */,
 				0E6BF0192DB922F40094326A /* Search */,
 				0E6BEF132DB8845D0094326A /* Home */,
@@ -1024,6 +1091,7 @@
 		0EB7A73B2DB8420D006408A2 /* Validation */ = {
 			isa = PBXGroup;
 			children = (
+				0E6BF08D2DB9D6820094326A /* RecentSearchManagerTests.swift */,
 				0E6BF07C2DB9CB2C0094326A /* AuthServiceTests.swift */,
 				0E6BF0782DB9C4BB0094326A /* GreetingHelperTests.swift */,
 				0E6BF04F2DB9ABB70094326A /* SortingHelperTests.swift */,
@@ -1305,6 +1373,7 @@
 			files = (
 				0E6BF0602DB9BAD80094326A /* InfoError.swift in Sources */,
 				0EB7A72F2DB83B45006408A2 /* RegisterRepository.swift in Sources */,
+				0E6BF0882DB9CE570094326A /* RecentSearchManager.swift in Sources */,
 				0EB7A6DE2DB78FB9006408A2 /* AppDIContainer.swift in Sources */,
 				0E6BF07B2DB9C9930094326A /* DecodeHelper.swift in Sources */,
 				0EB7A7332DB83BE7006408A2 /* RegisterUseCaseImpl.swift in Sources */,
@@ -1327,6 +1396,7 @@
 				0E6BF04A2DB997010094326A /* SearchNewsUseCaseImpl.swift in Sources */,
 				0E6BF0152DB8CEFF0094326A /* FetchNewsUseCase.swift in Sources */,
 				0EB7A6742DB78E7F006408A2 /* SSLSessionFactory.swift in Sources */,
+				0E6BF08A2DB9D3D60094326A /* SearchViewController+UITableView.swift in Sources */,
 				0E6BEF2A2DB8ADA70094326A /* SectionTableCell.swift in Sources */,
 				0E6BF0522DB9AEBA0094326A /* NewsSiteHelper.swift in Sources */,
 				0EB7A7122DB82044006408A2 /* LoginRepositoryImpl.swift in Sources */,
@@ -1361,6 +1431,7 @@
 				0EB7A6102DB7828A006408A2 /* ViewController.swift in Sources */,
 				0E6BF0122DB8CE0D0094326A /* IntExtension.swift in Sources */,
 				0E6BF04C2DB9970C0094326A /* SearchNewsUseCase.swift in Sources */,
+				0E6BF08C2DB9D46F0094326A /* SearchViewController+UISearchBar.swift in Sources */,
 				0E6BF06B2DB9BBD40094326A /* InfoUseCaseImpl.swift in Sources */,
 				0E6BF03E2DB995F30094326A /* SearchViewModel.swift in Sources */,
 				0E6BF0372DB992650094326A /* NewsAPIService.swift in Sources */,
@@ -1386,6 +1457,7 @@
 				0EB7A6E42DB7965B006408A2 /* MockAuthService.swift in Sources */,
 				0EB7A66B2DB785A0006408A2 /* NewsAppTests.swift in Sources */,
 				0EB7A6E02DB79021006408A2 /* SLLPanningTests.swift in Sources */,
+				0E6BF08E2DB9D6830094326A /* RecentSearchManagerTests.swift in Sources */,
 				0E6BF0792DB9C4BD0094326A /* GreetingHelperTests.swift in Sources */,
 				0EB7A6F22DB7D999006408A2 /* AuthRepositoryTests.swift in Sources */,
 				0E6BF07D2DB9CB2D0094326A /* AuthServiceTests.swift in Sources */,
