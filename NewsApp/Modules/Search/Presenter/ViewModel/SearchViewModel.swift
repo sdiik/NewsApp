@@ -22,6 +22,7 @@ class SearchViewModel {
     private(set) var newsSites: [String] = []
     var searchItem: [Blog] = []
     var filteredReports: [Blog] = []
+    var recentSearches: [String] = []
     
     var searchQuery: String = ""
     var selectedNewsSite: String?

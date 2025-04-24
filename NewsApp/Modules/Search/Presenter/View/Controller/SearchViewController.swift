@@ -24,7 +24,9 @@ class SearchViewController: ParentViewController {
         }
     }
     
-    private let refreshControl = UIRefreshControl()
+    let refreshControl = UIRefreshControl()
+    var recentTableView: UITableView!
+
     var newType: NewsType = .articles
     var viewModel = SearchViewModel()
     
@@ -34,6 +36,7 @@ class SearchViewController: ParentViewController {
         self.navigationItem.title = newType.title
         viewModel.delegate = self
         setupView()
+        setupRecentTableView()
         registerCell()
         viewModel.loadInitialNews(with: "", type: newType)
     }
@@ -57,6 +60,23 @@ class SearchViewController: ParentViewController {
         tableListView.rowHeight = UITableView.automaticDimension
         refreshControl.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
         tableListView.refreshControl = refreshControl
+    }
+    
+    private func setupRecentTableView() {
+        recentTableView = UITableView(frame: .zero, style: .plain)
+        recentTableView.register(UITableViewCell.self, forCellReuseIdentifier: "RecentCell")
+        recentTableView.dataSource = self
+        recentTableView.delegate = self
+        recentTableView.isHidden = true
+        view.addSubview(recentTableView)
+
+        recentTableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            recentTableView.topAnchor.constraint(equalTo: searchView.bottomAnchor),
+            recentTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            recentTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            recentTableView.heightAnchor.constraint(equalToConstant: 200) // adjust as needed
+        ])
     }
     
     @objc func handleRefresh() {
@@ -83,43 +103,6 @@ class SearchViewController: ParentViewController {
     }
 }
 
-extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if viewModel.filteredReports.isEmpty {
-            tableListView.separatorStyle = .none
-            return 1
-        } else {
-            tableListView.separatorStyle = .singleLine
-            return viewModel.filteredReports.count
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if viewModel.filteredReports.isEmpty {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "EmptyTableCell", for: indexPath) as? EmptyTableCell
-            else { return .init() }
-            return cell
-        } else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableCell", for: indexPath) as? SearchTableCell
-            else { return .init() }
-            cell.setupView(with: viewModel.filteredReports[indexPath.row])
-            return cell
-        }
-        
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offsetY = scrollView.contentOffset.y
-        let contentHeight = scrollView.contentSize.height
-        let height = scrollView.frame.size.height
-
-        if offsetY > contentHeight - height - 100 {
-            if !viewModel.isFilterProccesing() {
-                viewModel.loadNextPage()
-            }
-        }
-    }
-}
 
 extension SearchViewController: SearchViewDelegate {
     func didStartLoading() {
@@ -138,18 +121,5 @@ extension SearchViewController: SearchViewDelegate {
     func didSearchNews() {
         tableListView.reloadData()
         refreshControl.endRefreshing()
-    }
-}
-
-extension SearchViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        viewModel.searchQuery = searchText
-        viewModel.loadInitialNews(with: viewModel.searchQuery, type: newType)
-    }
-
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        viewModel.searchQuery = ""
-        searchView.text = viewModel.searchQuery
-        viewModel.loadInitialNews(with: viewModel.searchQuery, type: newType)
     }
 }
